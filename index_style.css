@@ -1,0 +1,70 @@
+/* CSS Document */
+html{
+	width: 100%;
+}
+body{
+	width:100%;
+	margin: 0;
+	background: White;
+	font-family: 'sans-serif';
+	font-weight: 400;
+}
+#top_bar{
+	width: 80%;
+	margin: 0 auto;
+	background: Black;
+}
+header{
+	background: Black;
+}
+header::after{
+	content: '';
+	display:table;
+	clear:both;
+}
+.logo{
+	float:left;
+	padding: 1%;
+	width: 30%;
+}
+nav{
+	float:right;
+	width: 60%;
+}
+nav ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+nav li{
+	display:inline-block;
+	margin-left:4%;
+	/*margin-top: 5%;*/
+	padding-top: 5%;
+	position: relative;
+}
+nav a{
+	color:white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 2vw;
+}
+nav a:hover{
+	color:white;
+}
+nav a::before{
+	content:'';
+	display:block;
+	height:5px;
+	width: 0%;
+	background-color: white;
+	
+	position: absolute;
+	top:0px;
+}
+nav a:hover::before{
+	width:100%;
+}
+.mySlides{
+	display:none;
+}
