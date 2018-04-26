@@ -25,17 +25,12 @@
 			</nav>
 		</div>
 	</header>
-	<!--<slider>
-		<slide><p>slide 1</p></slide>
-		<slide><p>slide 2</p></slide>
-		<slide><p>slide 3</p></slide>
-		<slide><p>slide 4</p></slide>
-	</slider>-->
-	<div style="width:100%;height: 1000px;overflow: hidden;">
-  		<img class="mySlides w3-animate-left" src="images/slideshow1.jpg" alt="first one" style="width:100%">
-	  	<img class="mySlides w3-animate-left" src="images/slideshow2.jpg" alt="second 2" style="width:100%">
-	  	<img class="mySlides w3-animate-left" src="images/slideshow3.jpg" alt="third 3" style="width:100%">
-	  	<img class="mySlides w3-animate-left" src="images/slideshow4.jpg" alt="fourth 4" style="width:100%">
+
+	<div class="slideshow">
+  		<img class="mySlides w3-animate-left" src="images/slideshow1.jpg" alt="first one">
+	  	<img class="mySlides w3-animate-left" src="images/slideshow2.jpg" alt="second 2">
+	  	<img class="mySlides w3-animate-left" src="images/slideshow3.jpg" alt="third 3">
+	  	<img class="mySlides w3-animate-left" src="images/slideshow4.jpg" alt="fourth 4">
 	</div>
 
 	<script>
@@ -54,6 +49,42 @@
 		setTimeout(carousel, 2500);    
 	}
 	</script>
+	<div class="title_bar">
+		<h1>Featured Projects</h1>
+	</div>
+	<div class="feed">
+		<div class="feat_proj">
+			<div class="feat_proj_text">
+				<a href='#'>Anza Borrega</a>
+				<p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+			</div>
+			<img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
+		</div>
+		<div class="feat_proj">
+			<div class="feat_proj_text">
+				<a href='#'>Anza Borrega</a>
+				<p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+			</div>
+			<img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
+		</div>
+		<div class="feat_proj">
+			<div class="feat_proj_text">
+				<a href='#'>Anza Borrega</a>
+				<p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+			</div>
+			<img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
+		</div>
+		<div class="feat_proj">
+			<div class="feat_proj_text">
+				<a href='#'>Anza Borrega</a>
+				<p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+			</div>
+			<img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
+		</div>
+	</div>
+	<div class="footer">
+		<p>any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
+	</div>
 	
 </body>
 

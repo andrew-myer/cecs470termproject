@@ -1,6 +1,7 @@
 /* CSS Document */
 html{
 	width: 100%;
+	margin: 0;
 }
 body{
 	width:100%;
@@ -9,6 +10,8 @@ body{
 	font-family: 'sans-serif';
 	font-weight: 400;
 }
+
+/*navigation bar*/
 #top_bar{
 	width: 80%;
 	margin: 0 auto;
@@ -65,6 +68,73 @@ nav a::before{
 nav a:hover::before{
 	width:100%;
 }
+
+/*homepage slideshow*/
 .mySlides{
 	display:none;
+	height: 100%; 
+	width:100%
+}
+.slideshow{
+	width:100%;
+	height:100vh;
+	overflow: hidden;
+}
+/*homepage feed*/
+.title_bar{
+	width: 100%;
+	color: white;
+	background-color: black;
+	text-align: center;
+	margin: 0;
+	padding:1%;
+}
+.title_bar h1{
+	margin: 0;
+	padding: 1%;
+	font-size: 3vw;
+}
+.feed{
+	margin-left: 5%;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	width: 90%;
+	float: left;
+	background-color:#9A9A9A;
+	padding-top: .5%;
+	padding-bottom: .5%;
+}
+
+.feat_proj{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: .5%;
+	margin-bottom: .5%;
+	float: left;
+	background-color:#FFFFFF;
+	text-align: left;
+	font-size: 1vw;
+}
+.feat_proj_text{
+	width: 46%;
+	margin: 2%;
+	float: left;
+}
+.feat_proj_text a{
+	font-size: 2.5vw;
+}
+.feat_proj_img{
+	width: 46%;
+	margin: 2%;
+	float: right;
+}
+
+/*footer*/
+.footer{
+	width: 100%;
+	font-size: 1vw;
+	color: white;
+	background-color: black;
+	float: left;
+	padding-left: 2%;
 }
