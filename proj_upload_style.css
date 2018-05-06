@@ -1,0 +1,133 @@
+/* CSS Document */
+/* CSS Document */
+html{
+	width: 100%;
+	margin: 0;
+	background: #5e5e66;
+}
+body{
+	width:100%;
+	margin: 0;
+	background:#5e5e66;
+	font-family: 'sans-serif';
+	font-weight: 400;
+}
+
+/*navigation bar*/
+#top_bar{
+	width: 80%;
+	margin: 0 auto;
+	background: Black;
+}
+header{
+	background: Black;
+}
+header::after{
+	content: '';
+	display:table;
+	clear:both;
+}
+.logo{
+	float:left;
+	padding: 1%;
+	width: 30%;
+}
+nav{
+	float:right;
+	width: 60%;
+}
+nav ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+nav li{
+	display:inline-block;
+	margin-left:4%;
+	/*margin-top: 5%;*/
+	padding-top: 5%;
+	position: relative;
+}
+nav a{
+	color:white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 2vw;
+}
+nav a:hover{
+	color:white;
+}
+nav a::before{
+	content:'';
+	display:block;
+	height:5px;
+	width: 0%;
+	background-color: white;
+
+	position: absolute;
+	top:0px;
+}
+nav a:hover::before{
+	width:100%;
+}
+
+.feat_pic{
+	width: 100%;
+}
+.title_bar{
+	width: 100%;
+	color: white;
+	background-color: Black;
+	text-align: center;
+	margin: 0;
+	padding:1%;
+	}
+.title_bar h1{
+	margin: 0;
+	padding: 1%;
+	font-size: 3vw;
+}
+/*footer*/
+.footer{
+	width: 100%;
+	font-size: 1vw;
+	color: white;
+	background-color: #171316 ;
+	float: left;
+	padding-left: 2%;
+}
+.feed{
+	margin-left: 5%;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	width: 90%;
+	float: left;
+	background-color:#b1b4bd;
+	/*padding-top: .5%;
+	padding-bottom: .5%;*/
+}
+.feat_proj{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: .5%;
+	margin-bottom: .5%;
+	float: left;
+	background-color:#ece4dc  ;
+	text-align: left;
+	font-size: 1vw;
+	padding-left: .5%;
+	padding-top: .5%;
+	padding-bottom: .5%;
+}
+.other_pics{
+	float: left;
+	width: 32%;
+	margin: .5%;
+}
+
+.error {color: #923333;}
+.error1 {
+    background: #FFCDD2 url(error.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #FF5252;
+    border-color: #FF1744;
+}
