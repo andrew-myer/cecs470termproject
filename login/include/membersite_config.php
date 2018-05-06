@@ -14,7 +14,7 @@ $fgmembersite->SetAdminEmail('mariolopez027@gmail.com');
 //hostname, user name, password, database name and table name
 //note that the script will create the table (for example, fgusers in this case)
 //by itself on submitting register.php for the first time
-$fgmembersite->InitDB(/*hostname*/'cecsdb01.coe.csulb.edu',
+$fgmembersite->InitDB(/*hostname*/'cecs-db01.coe.csulb.edu',
                       /*username*/'cecs470o27',
                       /*password*/'aix4ie',
                       /*database name*/'cecs470sec01og06',

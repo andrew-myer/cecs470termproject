@@ -808,7 +808,6 @@ class FGMembersite
                 "id_user INT NOT NULL AUTO_INCREMENT ,".
                 "name VARCHAR( 128 ) NOT NULL ,".
                 "email VARCHAR( 64 ) NOT NULL ,".
-                "phone_number VARCHAR( 16 ) NOT NULL ,".
                 "username VARCHAR( 16 ) NOT NULL ,".
 		"salt VARCHAR( 50 ) NOT NULL ,".
                 "password VARCHAR( 80 ) NOT NULL ,".
