@@ -1,23 +1,41 @@
 #!/usr/local/php5/bin/php-cgi
 <?php
+$name1=$name2=$name3=$image1=$image2=$image3="";
 $dbname = 'cecs470sec01og06';
 $dbuser = 'cecs470o33';
 $dbpass = 'ooz4qu';
 $dbhost = 'cecs-db01.coe.csulb.edu';
 $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-$test_query = "SHOW TABLES FROM $dbname";
-$result = mysql_query($test_query);
-$tblCnt = 0;
-while($tbl = mysql_fetch_array($result)) {
-  $tblCnt++;
-  #echo $tbl[0]."<br />\n";
+$connString = "mysql:host=cecs-db01.coe.csulb.edu;dbname=cecs470sec01og06";
+$pdo = new PDO($connString,$dbuser,$dbpass);
+
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+	echo $_POST['name2'];
+	
+	mysql_query("Insert into Slideshow (Name) Values ("+$_POST['name2']+")",$connect);
+	
+	$sql = "Insert into Slideshow (Name) VALUES (:name1)";
+	$statement = $pdo->prepare($sql);
+	$statement->bindValue(':name1', $_POST['name1']);
+	//$statement->bindValue(':image1', $_POST['image1']);
+	$statement->execute();
+	
+	$sql2 = "Insert into Slideshow (Name, Path) VALUES(:name2, :image2)";
+	$statement2 = $pdo->prepare($sql2);
+	$statement2->bindValue(':name2', $_POST['name2']);
+	$statement2->bindValue(':image2', $_POST['image2']);
+	$statement2->execute();
+	
+	$sql3 = "Insert into Slideshow (Name, Path) VALUES(:name3, :image3)";
+	$statement3 = $pdo->prepare($sql3);
+	$statement3->bindValue(':name3', $_POST['name3']);
+	$statement3->bindValue(':image3', $_POST['image3']);
+	$statement3->execute();
+
 }
-if (!$tblCnt) {
-  echo "There are no tables<br />\n";
-} else {
-  echo "There are $tblCnt tables<br />\n";
-}
+
 ?>
 <!DOCTYPE html>
 <html lang ="en">
@@ -49,13 +67,19 @@ if (!$tblCnt) {
 	</div>
 	<div class="feed">
 		<div class="feat_proj">
-			<form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return subCheck()">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return subCheck()">
 				<label for="image1">Select First Slideshow Image</label>
 				<input type="file" name="image1" id="image1" class="required hilightable"><br>
+				<label for="name1">name of first image:</label><br>
+    			<input type="text" name="name1" class="required hilightable" id="name1"><br><br>
 				<label for="image2">Select Second Slideshow Image</label>
 				<input type="file" name="image2" id="image2" class="required hilightable"><br>
+				<label for="name2">name of second image:</label><br>
+    			<input type="text" name="name2" class="required hilightable" id="name2"><br><br>
 				<label for="image3">Select Third Slideshow Image</label>
 				<input type="file" name="image3" id="image3" class="required hilightable"><br>
+				<label for="name3">name of third image:</label><br>
+    			<input type="text" name="name3" class="required hilightable" id="name3">
 				<br><br>
 				<button type="reset" name="reset">reset</button>
 				<button class="submitButton" type="submit" name="submit">submit</button>
