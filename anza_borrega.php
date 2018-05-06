@@ -1,5 +1,12 @@
 #!/usr/local/php5/bin/php-cgi
 <?php
+$imageFolder = 'images/';
+$imageTypes = '{*.jpg,*.JPG,*.jpeg,*.JPEG,*.png,*.PNG,*.gif,*.GIF}';
+$images = glob($imageFolder . $imageTypes, GLOB_BRACE);
+$textFolder='./';
+$textTypes='{*.txt,*.text}';
+$text=glob($textFolder . $textTypes, GLOB_BRACE);
+$file = file_get_contents("$text[0]");
 ?>
 <!DOCTYPE html>
 <html lang ="en">
@@ -18,7 +25,7 @@
 			<nav>
 				<ul>
 					<li><a href='index.php'>Home</a><li>
-					<li><a href='#'>About </a><li>
+					<li><a href='about.php'>About </a><li>
 					<li><a href='#'>Projects</a><li>
 					<li><a href='#'>Contact</a><li>
 				</ul>
@@ -28,22 +35,28 @@
 	<div class="title_bar">
 		<h1> Anza Borrega</h1>
 	</div>
-	<img src="images/slideshow1.jpg" class="feat_pic">
+
+	<img src="<?php echo $images[0] ?>" class="feat_pic">
 	<div class="feed">
 		
 		<div class="feat_proj">
-			<p>blah blah blah blah blah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blahblah blah blah blah</p>
+			<p><?php echo $file?></p>
 		</div>
 		<div class="feat_proj">
-			<img src="images/slideshow1.jpg" class="other_pics">
-			<img src="images/slideshow1.jpg" class="other_pics">
-			<img src="images/slideshow1.jpg" class="other_pics">
-			<img src="images/slideshow1.jpg" class="other_pics">
-			<img src="images/slideshow1.jpg" class="other_pics">
-			<img src="images/slideshow1.jpg" class="other_pics">
-			<img src="images/slideshow1.jpg" class="other_pics">
-			<img src="images/slideshow1.jpg" class="other_pics">
-			<img src="images/slideshow1.jpg" class="other_pics">
+			<?php
+				foreach($images as $image){
+					echo "<div class=\"other_pics\"><img src=\"$image\" class=\"feat_pic\"></div>";
+				}
+			?>
+			<!--<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
+			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
+			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
+			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
+			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
+			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
+			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
+			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
+			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>-->
 		</div>
 	</div>
 	<div class="footer">

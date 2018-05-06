@@ -1,5 +1,6 @@
 #!/usr/local/php5/bin/php-cgi
 <?php
+
 ?>
 <!DOCTYPE html>
 <html lang ="en">
@@ -18,7 +19,7 @@
 			<nav>
 				<ul>
 					<li><a href='index.php'>Home</a><li>
-					<li><a href='#'>About </a><li>
+					<li><a href='about.php'>About </a><li>
 					<li><a href='#'>Projects</a><li>
 					<li><a href='#'>Contact</a><li>
 				</ul>
