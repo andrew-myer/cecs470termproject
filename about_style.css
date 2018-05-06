@@ -1,0 +1,172 @@
+html{
+	margin: 0;
+}
+body{
+	width: 100%;
+	background-color:#5E5E66;
+	margin: 0;
+	font-family: 'sans-serif';
+	font-weight: 400;
+}
+
+/*navigation bar*/
+#top_bar{
+	width: 80%;
+	margin: 0 auto;
+	background: Black;
+}
+header{
+	background: Black;
+}
+header::after{
+	content: '';
+	display:table;
+	clear:both;
+}
+.logo{
+	float:left;
+	padding: 1%;
+	width: 30%;
+}
+nav{
+	float:right;
+	width: 60%;
+}
+nav ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+nav li{
+	display:inline-block;
+	margin-left:4%;
+	/*margin-top: 5%;*/
+	padding-top: 5%;
+	position: relative;
+}
+nav a{
+	color:white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 2vw;
+}
+nav a:hover{
+	color:white;
+}
+nav a::before{
+	content:'';
+	display:block;
+	height:5px;
+	width: 0%;
+	background-color: white;
+	
+	position: absolute;
+	top:0px;
+}
+nav a:hover::before{
+	width:100%;
+}
+
+
+
+.title_bar{
+	width: 100%;
+	color: white;
+	background-color: black;
+	text-align: center;
+	margin: 0;
+	padding:1%;
+}
+
+.title_bar h1{
+	margin: 0;
+	padding: 1%;
+	font-size: 3vw;
+}
+
+.author{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 7%;
+	margin-bottom: 7%;
+	float: left;
+	background-color:#FFFFFF;
+	text-align: left;
+	font-size: 1vw;
+}
+
+.socialmedia {
+	display: block;
+	margin-left: 5%;
+	width: 90%;
+	padding: 0em 0em;
+	padding-right: 3em;
+	background-color: #FFFFFF;
+	border: none;
+	float: left;
+	padding-top: 2em;
+	padding-bottom: 1em;
+	margin-top: 0em;
+	margin-bottom: 2%;
+	padding-left: 34%;
+}
+
+.here{
+width: 50em;
+height: 50em;
+margin-right: 5em;
+padding: 0 0;
+}
+
+.here1{
+width: 50em;
+height: 50em;
+margin-left: 5em;
+padding: 0 0;
+}
+
+.feat_proj_text{
+	width: 46%;
+	margin: 2%;
+font-size: 1vw;
+	float: right;
+}
+.feat_proj_text a{
+	font-size: 2.5vw;
+}
+.feat_proj_img{
+	width: 46%;
+	margin: 2%;
+	float: left;
+}
+
+/*footer*/
+.footer{
+	float: left;
+	width: 100%;
+	font-size: 1vw;
+	color: white;
+	background-color: black;
+	padding-left: 2%;
+}
+
+#wrapper{
+	float: left;
+	width:100%;
+	height: 100%;
+}
+
+#img1{
+	height:7%;
+ 	width:7%; 
+}
+
+#img2{
+	height:7%;
+ 	width:7%; 
+}
+
+#img3{
+	height:7%;
+ 	width:7%; 
+}
