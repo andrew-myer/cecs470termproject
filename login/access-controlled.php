@@ -1,3 +1,4 @@
+#!/usr/local/php5/bin/php-cgi
 <?PHP
 require_once("./include/membersite_config.php");
 
