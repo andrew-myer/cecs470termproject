@@ -1,6 +1,5 @@
 #!/usr/local/php5/bin/php-cgi
 <?php
-$name1=$name2=$name3=$name4=$image1=$image2=$image3=$image4="";
 $dbname = 'cecs470sec01og06';
 $dbuser = 'cecs470o33';
 $dbpass = 'ooz4qu';

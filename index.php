@@ -35,7 +35,7 @@ while ($row = mysql_fetch_array($result1)) {
 <body>
 	<header>
 		<div id="top_bar">
-			<img src="images/logo.png" alt="logo" class="logo">
+			<img src="images/logo.png" alt="Levi Thompson Media" class="logo">
 			<nav>
 				<ul>
 					<li><a href='index.php'>Home</a><li>
