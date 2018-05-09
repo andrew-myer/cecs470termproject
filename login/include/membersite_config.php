@@ -1,4 +1,3 @@
-#!/usr/local/php5/bin/php-cgi
 <?PHP
 require_once("./include/fg_membersite.php");
 
