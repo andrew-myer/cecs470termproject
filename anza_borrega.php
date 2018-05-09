@@ -38,7 +38,7 @@ $file = file_get_contents("$text[0]");
 
 	<img src="<?php echo $images[0] ?>" class="feat_pic">
 	<div class="feed">
-		
+
 		<div class="feat_proj">
 			<p><?php echo $file?></p>
 		</div>
@@ -62,7 +62,7 @@ $file = file_get_contents("$text[0]");
 	<div class="footer">
 		<p>any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
 	</div>
-	
+
 </body>
 
 </html>

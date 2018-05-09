@@ -8,12 +8,18 @@ $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to
 mysql_select_db($dbname) or die("Could not open the db '$dbname'");
 $connString = "mysql:host=cecs-db01.coe.csulb.edu;dbname=cecs470sec01og06";
 $pdo = new PDO($connString,$dbuser,$dbpass);
-//$sql="SELECT Name FROM Slideshow";
-//$result = $pdo->query($sql);
-//echo $result;
-$temp=mysql_query("SELECT Path FROM Slideshow",$connect);
-$temp=mysql_fetch_array($temp);
-echo $temp[0];
+
+$result = mysql_query("SELECT Path FROM Slideshow",$connect);
+$slideshow = array();
+while ($row = mysql_fetch_array($result)) {
+    array_push($slideshow, $row["Path"]);
+}
+
+$result1 = mysql_query("SELECT Name FROM Slideshow",$connect);
+$name = array();
+while ($row = mysql_fetch_array($result1)) {
+    array_push($name, $row["Name"]);
+}
 
 ?>
 <!DOCTYPE html>
@@ -42,10 +48,10 @@ echo $temp[0];
 	</header>
 
 	<div class="slideshow">
-  		<img class="mySlides w3-animate-left" src="images/<?php echo $temp[0]; ?>" alt="first one">
-	  	<img class="mySlides w3-animate-left" src="images/<?php echo $temp[1]; ?>" alt="second 2">
-	  	<img class="mySlides w3-animate-left" src="images/<?php echo $temp[2]; ?>g" alt="third 3">
-	  	<img class="mySlides w3-animate-left" src="images/<?php echo $temp[3]; ?>" alt="fourth 4">
+  		<img class="mySlides w3-animate-left" src="images/<?php echo $slideshow[0]; ?>" alt="<?php echo $name[0]; ?>">
+	  	<img class="mySlides w3-animate-left" src="images/<?php echo $slideshow[1]; ?>" alt="<?php echo $name[1]; ?>">
+	  	<img class="mySlides w3-animate-left" src="images/<?php echo $slideshow[2]; ?>" alt="<?php echo $name[2]; ?>">
+	  	<img class="mySlides w3-animate-left" src="images/<?php echo $slideshow[3]; ?>" alt="<?php echo $name[3]; ?>">
 	</div>
 
 	<script>
