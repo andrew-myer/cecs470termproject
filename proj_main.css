@@ -1,0 +1,183 @@
+/* CSS Document */
+html{
+	width: 100%;
+	margin: 0;
+}
+body{
+	width:100%;
+	margin: 0;
+	background: White;
+	font-family: 'sans-serif';
+	font-weight: 400;
+}
+
+/*navigation bar*/
+#top_bar{
+	width: 80%;
+	margin: 0 auto;
+	background: Black;
+}
+header{
+	background: Black;
+}
+header::after{
+	content: '';
+	display:table;
+	clear:both;
+}
+.logo{
+	float:left;
+	padding: 1%;
+	width: 30%;
+}
+nav{
+	float:right;
+	width: 60%;
+}
+nav ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+nav li{
+	display:inline-block;
+	margin-left:4%;
+	padding-top: 5%;
+	position: relative;
+}
+nav a{
+	color:white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 2vw;
+}
+nav a:hover{
+	color:white;
+}
+nav a::before{
+	content:'';
+	display:block;
+	height:5px;
+	width: 0%;
+	background-color: white;
+	
+	position: absolute;
+	top:0px;
+}
+nav a:hover::before{
+	width:100%;
+}
+
+/*Main*/
+h1{
+    background-color: #262626;
+    color: white;
+    padding-left: 16.2%;
+    padding-top: 1%;
+    padding-bottom:1%;
+    margin: 0;
+    font-weight: normal;
+    font-size: 2.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+/*Img*Hover*/
+.container {
+    position: relative;
+    width: 49%;
+    float:left;
+    margin: .5%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+/*img-hover*/
+
+span {
+  text-align: center;
+  margin-top: 0;
+  font-size:2vw;
+  padding: 5%;
+  border: solid 1px white;
+}
+
+
+span a:link, span a:visited {
+  color: white;
+  text-decoration: none;
+}
+span:hover, span a:hover{
+  text-decoration: underline;
+}
+/*footer*/
+.footer{
+	width: 100%;
+	font-size: 1vw;
+	color: white;
+	background-color: black;
+	float: left;
+	padding-left: 2%;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+  }
+  span{
+    font-size:4vw;
+  }
+  .text{
+    font-size: 7vw;
+  }
+  nav a{
+    font-size: 4vw;
+  }
+  h1{
+    font-size: 7vw;
+    padding-left:38%;
+  }
+  .logo{
+    width: 100%;
+  }
+  nav{
+    float:none;
+    margin-left:25%;
+    position: relative;
+    margin-bottom: 5%;
+  }
+}

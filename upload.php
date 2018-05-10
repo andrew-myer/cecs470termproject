@@ -4,17 +4,6 @@ $prj_nameErr = $prj_descErr =  $noImageErr[] = " ";
 $prj_name = $prj_desc =  "";
 $num_files = 0;
 
-//Database connection
-$dbname = 'cecs470sec01og06';
-$dbuser = 'cecs470o33';
-$dbpass = 'ooz4qu';
-$dbhost = 'cecs-db01.coe.csulb.edu';
-$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
-mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-$connString = "mysql:host=cecs-db01.coe.csulb.edu;dbname=cecs470sec01og06";
-$pdo = new PDO($connString,$dbuser,$dbpass);
-// end database connection
-
 /*
 CREATE TABLE projects
   (
@@ -125,6 +114,17 @@ for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++)
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadk !== 0 && $$imgErr!==0 && $prj_nameErr=="" && $prj_descErr=="") {
+    //Database connection
+    $dbname = 'cecs470sec01og06';
+    $dbuser = 'cecs470o33';
+    $dbpass = 'ooz4qu';
+    $dbhost = 'cecs-db01.coe.csulb.edu';
+    $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+    mysql_select_db($dbname) or die("Could not open the db '$dbname'");
+    $connString = "mysql:host=cecs-db01.coe.csulb.edu;dbname=cecs470sec01og06";
+    $pdo = new PDO($connString,$dbuser,$dbpass);
+    // end database connection
+
     $sql = "Insert into projects (prj_name, prj_description) VALUES (?,?)";
 	$statement = $pdo->prepare($sql);
 	$statement->bindValue(1, $_POST['prj_name']);
@@ -145,6 +145,7 @@ for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++){
         $noImageErr[$i] = "There was an error uploading ".basename( $_FILES["fileToUpload"]["name"][$i]). "<br>";
     }
 }
+$connect = null;
 }
 }
 
