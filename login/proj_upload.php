@@ -66,11 +66,12 @@ if(isset($_POST["submit"])) {
         $uploadOk[$i] = 0;
     }
 }
+/*
 // Check if file already exists
 if (file_exists($target_file)) {
     $noImageErr[$i] = basename( $_FILES["fileToUpload"]["name"][$i]). " already exists.<br>";
     $uploadOk[$i] = 0;
-}
+}*/
 // Check file size
 if ($_FILES["fileToUpload"]["size"][$i] > 500000000000000) {
     $noImageErr[$i] = basename( $_FILES["fileToUpload"]["name"][$i]). " is too large.<br>";
