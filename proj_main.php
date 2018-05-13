@@ -58,7 +58,7 @@ $connect = null;
                 <img src="<?php echo $img_path[$key]; ?>" alt="<?php echo $value; ?>" class="image">
                 <div class="overlay">
                     <div class="text"><h2><?php echo $value; ?></h2>
-                      <span><a href="anza_borrega.php.php?id=<?php echo $value;?>">Explore</a></span>
+                      <span><a href="anza_borrega.php?id=<?php echo $value;?>">Explore</a></span>
                     </div>
                 </div>
           </div>

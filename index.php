@@ -20,6 +20,25 @@ $name = array();
 while ($row = mysql_fetch_array($result1)) {
     array_push($name, $row["Name"]);
 }
+
+
+
+$result2 = mysql_query("SELECT img_path from images group by prj_name",$connect);
+$img_path = array();
+while ($row = mysql_fetch_array($result2)) {
+    array_push($img_path, $row["img_path"]);
+}
+$result3 = mysql_query("SELECT prj_name from images group by prj_name",$connect);
+$prj_name = array();
+while ($row = mysql_fetch_array($result3)) {
+    array_push($prj_name, $row["prj_name"]);
+}
+$result4 = mysql_query("SELECT prj_description from projects group by prj_name",$connect);
+$prj_desc = array();
+while ($row = mysql_fetch_array($result4)) {
+    array_push($prj_desc, $row["prj_description"]);
+}
+
 $connect = null;
 ?>
 <!DOCTYPE html>
@@ -74,34 +93,15 @@ $connect = null;
 		<h1>Featured Projects</h1>
 	</div>
 	<div class="feed">
-    <div class="feat_proj">
-      <div class="feat_proj_text">
-        <a href='#'>Anza Borrega</a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada quis magna quis mattis. Ut congue, lectus elementum suscipit laoreet, nibh nisi eleifend diam, sed dictum eros ante a magna. Mauris dignissim, dolor vitae imperdiet imperdiet, nibh odio volutpat est, egestas sollicitudin leo sapien et nunc. Aenean bibendum, diam ut iaculis blandit, dui arcu feugiat massa, varius fringilla nibh est sed lectus. Duis euismod mattis felis, at viverra lacus eleifend et. Aenean vehicula velit nisl, et fringilla nunc molestie sit amet. Phasellus et pulvinar turpis, sed convallis lectus. Pellentesque fermentum dolor ut maximus viverra. Maecenas eu urna elit. Vestibulum egestas quam sed porttitor rhoncus. Nulla ac rhoncus mi.</p>
-      </div>
-      <img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
-    </div>
+    <?php for($i=0;$i<4;$i++):?>
 		<div class="feat_proj">
 			<div class="feat_proj_text">
-				<a href='#'>Anza Borrega</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada quis magna quis mattis. Ut congue, lectus elementum suscipit laoreet, nibh nisi eleifend diam, sed dictum eros ante a magna. Mauris dignissim, dolor vitae imperdiet imperdiet, nibh odio volutpat est, egestas sollicitudin leo sapien et nunc. Aenean bibendum, diam ut iaculis blandit, dui arcu feugiat massa, varius fringilla nibh est sed lectus. Duis euismod mattis felis, at viverra lacus eleifend et. Aenean vehicula velit nisl, et fringilla nunc molestie sit amet. Phasellus et pulvinar turpis, sed convallis lectus. Pellentesque fermentum dolor ut maximus viverra. Maecenas eu urna elit. Vestibulum egestas quam sed porttitor rhoncus. Nulla ac rhoncus mi.</p>
+				<a href='anza_borrega.php?id=<?php echo $prj_name[$i];?>'><?php echo $prj_name[$i];?></a>
+				<p><?php echo $prj_desc[$i];?></p>
 			</div>
-			<img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
+			<img src="<?php echo $img_path[$i]; ?>" class="feat_proj_img" alt="anotha one">
 		</div>
-		<div class="feat_proj">
-			<div class="feat_proj_text">
-				<a href='#'>Anza Borrega</a>
-				<p>Mauris vel enim consectetur ligula molestie luctus sit amet eget arcu. Integer tempor magna ut felis accumsan, faucibus ultrices tortor faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In et justo ex. Aliquam accumsan nisl nec tempus pellentesque. Nunc ac odio quam. Etiam aliquet magna vitae tortor maximus, non eleifend dui sagittis. Sed pretium in diam ac pulvinar.</p>
-			</div>
-			<img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
-		</div>
-		<div class="feat_proj">
-			<div class="feat_proj_text">
-				<a href='#'>Anza Borrega</a>
-				<p>Pellentesque tristique sed risus sit amet imperdiet. Proin laoreet volutpat sem quis ultricies. Donec vel luctus tellus, a aliquam odio. Vestibulum quis augue in velit tristique efficitur. Maecenas consequat elit sit amet consequat ornare. Maecenas aliquet lectus vel odio hendrerit feugiat. Nam tempus enim sit amet lorem euismod fermentum. Pellentesque sed orci in orci convallis convallis a et augue. Praesent lobortis orci varius, ultricies mi eget, imperdiet magna. Quisque scelerisque, ipsum id consequat semper, eros ipsum volutpat libero, eu vehicula orci eros et dolor. Mauris ac neque eu orci porttitor pretium vel nec justo. Donec eget felis et mi varius ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum erat arcu, eu elementum mauris tincidunt nec.</p>
-			</div>
-			<img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
-		</div>
+<?php endfor; ?>
 	</div>
 	<div class="footer">
 		<p>any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
