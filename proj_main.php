@@ -27,7 +27,7 @@ $connect = null;
 <html lang ="en">
 <head>
 	<meta charset="utf-8">
-	<title>LeviThompsonMedia</title>
+	<title>LeviThompsonMedia-Project</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="proj_main.css">
     <script src="js/projects.js"></script>
@@ -49,20 +49,25 @@ $connect = null;
     </header>
     <main>
         <h1>Projects</h1>
+        <table>
         <?php foreach($prj_name as $key=>$value): ?>
+        <?php if($key%2 == 0){echo "<tr>";}; ?>
+        <td>
          <div class="container">
                 <img src="<?php echo $img_path[$key]; ?>" alt="<?php echo $value; ?>" class="image">
                 <div class="overlay">
                     <div class="text"><p><?php echo $value; ?></p>
-                      <span><a href="proj_main.php">Explore</a></span>
+                      <span><a href="index.php?id=<?php echo $value;?>">Explore</a></span>
                     </div>
                 </div>
           </div>
+        </td>
+        <?php if($key%2 != 0){echo "</tr>";}; ?>
         <?php endforeach; ?>
-        
+        </table>
     </main>
     <div class="footer">
-        <p>any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
+        <p>Any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
       </div>
 </body>
 
