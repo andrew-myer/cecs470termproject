@@ -66,11 +66,14 @@ if(isset($_POST["submit"])) {
         $uploadOk[$i] = 0;
     }
 }
+/* new folder no need
 // Check if file already exists
 if (file_exists($target_file)) {
     $noImageErr[$i] = basename( $_FILES["fileToUpload"]["name"][$i]). " already exists.<br>";
     $uploadOk[$i] = 0;
 }
+*/
+
 // Check file size
 if ($_FILES["fileToUpload"]["size"][$i] > 500000000000000) {
     $noImageErr[$i] = basename( $_FILES["fileToUpload"]["name"][$i]). " is too large.<br>";
@@ -109,12 +112,12 @@ if ($uploadk !== 0 && $$imgErr!==0 && $prj_nameErr=="" && $prj_descErr=="") {
 	$statement->bindValue(1, $_POST['prj_name']);
 	$statement->bindValue(2, $_POST["prj_desc"]);
 	$statement->execute();
-    mkdir("../".$target_dir ."/". $prj_name);
+    mkdir($target_dir ."/". $prj_name);
 for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++){
     $target_file = $target_dir ."/".$prj_name ."/". basename($_FILES["fileToUpload"]["name"][$i]);
 
 // if everything is ok, try to upload file
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], "../".$target_file)) {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
         $sql2 = "Insert into images (prj_name, img_path) VALUES(?,?)";
 	    $statement2 = $pdo->prepare($sql2);
 	    $statement2->bindValue(1, $_POST['prj_name']);
@@ -134,14 +137,14 @@ $connect = null;
 <html lang ="en">
 <head>
 	<meta charset="utf-8">
-	<title>LeviThompsonMedia-Upload Project</title>
+	<title>LeviThompsonMedia-Project Upload</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="proj_mod.css">
 
 </head>
 
 <body>
-<h1>Upload Project:</h1>
+<h1>Project Upload:</h1>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
     <label for="prj_name">Project Name:</label><br>
