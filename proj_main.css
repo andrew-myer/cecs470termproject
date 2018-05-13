@@ -1,0 +1,225 @@
+/* CSS Document */
+html{
+	width: 100%;
+	margin: 0;
+}
+body{
+	width:100%;
+	margin: 0;
+	background: White;
+	font-family: 'sans-serif';
+	font-weight: 400;
+}
+
+/*navigation bar*/
+#top_bar{
+	width: 80%;
+	margin: 0 auto;
+	background: Black;
+}
+header{
+	background: Black;
+}
+header::after{
+	content: '';
+	display:table;
+	clear:both;
+}
+.logo{
+	float:left;
+	padding: 1%;
+	width: 30%;
+}
+nav{
+  margin-top:2%;
+	float:right;
+	width: 60%;
+}
+nav ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+nav li{
+	display:inline-block;
+	margin-left:2%;
+	padding-top: 2%;
+	position: relative;
+}
+nav a{
+	color:white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 2vw;
+}
+nav a:hover{
+	color:white;
+}
+nav a::before{
+	content:'';
+	display:block;
+	height:5px;
+	width: 0%;
+	background-color: white;
+	
+	position: absolute;
+	top:0px;
+}
+nav a:hover::before{
+	width:100%;
+}
+
+/*Main*/
+h1{
+    background-color: #262626;
+    color: white;
+    padding-left: 16.2%;
+    padding-top: 1%;
+    padding-bottom:1%;
+    margin: 0;
+    font-weight: normal;
+    font-size: 2.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+td{
+  width: 50%;
+}
+table{
+  margin-left:10%;
+  margin-right:10%;
+}
+p{
+  margin-bottom:2%;
+}
+/*Img*Hover*/
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*img-hover*/
+
+span {
+text-align: center;
+margin-top: 0;
+font-size: 1.5vw;
+padding: 4%;
+border: solid 1px white;
+}
+
+
+span a:link, span a:visited {
+color: white;
+text-decoration: none;
+}
+span:hover, span a:hover{
+text-decoration: underline;
+}
+main{
+  background-color: black;
+}
+@media all and (max-width:900px){
+  table{
+      margin-left:15%;
+      margin-right:15%;
+  }
+
+  td{
+      display:block;
+      width:100%;
+      margin-bottom:.5%;
+  }
+
+  tr{
+      display:block;
+  }
+
+  tr tr{
+      margin-bottom:0;
+  }
+  .text {
+      font-size: 4vw;
+    }
+  /*img-hover*/
+  
+  span {
+      font-size: 2.5vw;
+  }
+  nav a{
+    font-size: 3vw;
+  }
+  h1{
+    font-size: 4vw;
+    padding-left: 42.5%;
+
+  }
+  .logo{
+    width: 50%;
+    margin-left:25%;
+  }
+  nav{
+    float:left;
+    margin-left:0;
+    margin-bottom: 5%;
+    width:100%;
+    text-align:center;
+    margin-top:0;
+  }
+  #top_bar{
+    width: 100%;
+    margin:0;
+  }
+
+  nav li{
+    margin-left:2%;
+    padding-top: 2%;
+  }
+  .footer{
+    font-size: 15px;
+  }
+}
+/*footer*/
+.footer{
+	width: 100%;
+	font-size: 15px;
+	color: white;
+	background-color: #262626;
+	float: left;
+	text-align:center;
+}
