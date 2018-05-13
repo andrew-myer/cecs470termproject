@@ -40,9 +40,9 @@ $connect = null;
 			<img src="images/logo.png" alt="frontlogo" class="logo">
 			<nav>
 				<ul>
-					<li><a href='#'>Home</a><li>
-					<li><a href='#'>About </a><li>
-					<li><a href='#'>Projects</a><li>
+					<li><a href='index.php'>Home</a><li>
+					<li><a href='about.php'>About </a><li>
+					<li><a href='proj_main.php'>Projects</a><li>
 					<li><a href='#'>Contact</a><li>
 				</ul>
 			</nav>
