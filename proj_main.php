@@ -1,7 +1,6 @@
 #!/usr/local/php5/bin/php-cgi
 <?php
 //Database connection
-$prj_name ="Nature";
 $dbname = 'cecs470sec01og06';
 $dbuser = 'cecs470o33';
 $dbpass = 'ooz4qu';
@@ -37,7 +36,7 @@ $connect = null;
 <body>
 	<header>
 		<div id="top_bar">
-			<img src="images/logo.png" alt="frontlogo" class="logo">
+			<img src="images/logo.png" alt="logo" class="logo">
 			<nav>
 				<ul>
 					<li><a href='#'>Home</a><li>
@@ -58,13 +57,11 @@ $connect = null;
                 <img src="<?php echo $img_path[$key]; ?>" alt="<?php echo $value; ?>" class="image">
                 <div class="overlay">
                     <div class="text"><p><?php echo $value; ?></p>
-                      <span><a href="index.php?id=<?php echo $value;?>">Explore</a></span>
+                      <span><a href="anza_borrega.php?id=<?php echo $value;?>">Explore</a></span>
                     </div>
                 </div>
           </div>
         </td>
-        <?php if($key%2 != 0){echo "</tr>";}; ?>
-        <?php endforeach; ?>
         </table>
     </main>
     <div class="footer">

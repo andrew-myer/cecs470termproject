@@ -21,15 +21,6 @@ while ($row = mysql_fetch_array($result1)) {
     array_push($proj_desc, $row["prj_description"]);
 }
 $connect = null;
-
-
-/*$imageFolder = 'images/';
-$imageTypes = '{*.jpg,*.JPG,*.jpeg,*.JPEG,*.png,*.PNG,*.gif,*.GIF}';
-$images = glob($imageFolder . $imageTypes, GLOB_BRACE);
-$textFolder='./';
-$textTypes='{*.txt,*.text}';
-$text=glob($textFolder . $textTypes, GLOB_BRACE);
-$file = file_get_contents("$text[0]");*/
 ?>
 <!DOCTYPE html>
 <html lang ="en">

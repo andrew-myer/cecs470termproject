@@ -20,7 +20,7 @@ $name = array();
 while ($row = mysql_fetch_array($result1)) {
     array_push($name, $row["Name"]);
 }
-
+$connect = null;
 ?>
 <!DOCTYPE html>
 <html lang ="en">
@@ -74,13 +74,13 @@ while ($row = mysql_fetch_array($result1)) {
 		<h1>Featured Projects</h1>
 	</div>
 	<div class="feed">
-		<div class="feat_proj">
-			<div class="feat_proj_text">
-				<a href='#'>Anza Borrega</a>
-				<p>Nunc vel sem in sapien mollis congue. Donec maximus velit odio, et condimentum risus aliquet quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut cursus, dui ut cursus dignissim, nibh mauris ultricies magna, quis semper augue enim quis dolor. Fusce efficitur nunc in nibh finibus, eget dictum libero gravida. Donec eu dapibus felis. Donec sit amet bibendum erat, vitae consequat augue. Nam tempor ex risus.</p>
-			</div>
-			<img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
-		</div>
+    <div class="feat_proj">
+      <div class="feat_proj_text">
+        <a href='#'>Anza Borrega</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada quis magna quis mattis. Ut congue, lectus elementum suscipit laoreet, nibh nisi eleifend diam, sed dictum eros ante a magna. Mauris dignissim, dolor vitae imperdiet imperdiet, nibh odio volutpat est, egestas sollicitudin leo sapien et nunc. Aenean bibendum, diam ut iaculis blandit, dui arcu feugiat massa, varius fringilla nibh est sed lectus. Duis euismod mattis felis, at viverra lacus eleifend et. Aenean vehicula velit nisl, et fringilla nunc molestie sit amet. Phasellus et pulvinar turpis, sed convallis lectus. Pellentesque fermentum dolor ut maximus viverra. Maecenas eu urna elit. Vestibulum egestas quam sed porttitor rhoncus. Nulla ac rhoncus mi.</p>
+      </div>
+      <img src="images/slideshow2.jpg" class="feat_proj_img" alt="anotha one">
+    </div>
 		<div class="feat_proj">
 			<div class="feat_proj_text">
 				<a href='#'>Anza Borrega</a>
