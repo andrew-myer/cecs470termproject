@@ -1,4 +1,4 @@
-#!/usr/local/php5/bin/php-cgi
+#!/usr/local/php5/bin/php-cgi -q
 <?PHP
 require_once("./include/membersite_config.php");
 
@@ -65,11 +65,10 @@ if(isset($_POST['submitted']))
 
 </fieldset>
 </form>
-<!-- client-side Form Validations:
-Uses the excellent form validation script from JavaScript-coder.com-->
+<!-- client-side Form Validations -->
 
 <script type='text/javascript'>
-// <![CDATA[
+    
     var pwdwidget = new PasswordWidget('oldpwddiv','oldpwd');
     pwdwidget.enableGenerate = false;
     pwdwidget.enableShowStrength=false;
@@ -88,7 +87,6 @@ Uses the excellent form validation script from JavaScript-coder.com-->
     
     frmvalidator.addValidation("newpwd","req","Please provide your new password");
 
-// ]]>
 </script>
 
 <p>
@@ -97,7 +95,7 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 
 </div>
 <!--
-Form Code End (see html-form-guide.com for more info.)
+Form Code End
 -->
 
 </body>

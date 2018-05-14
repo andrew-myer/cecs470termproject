@@ -73,7 +73,7 @@ if (file_exists($target_file)) {
     $uploadOk[$i] = 0;
 }*/
 // Check file size
-if ($_FILES["fileToUpload"]["size"][$i] > 500000000000000) {
+if ($_FILES["fileToUpload"]["size"][$i] > 40000000) {
     $noImageErr[$i] = basename( $_FILES["fileToUpload"]["name"][$i]). " is too large.<br>";
     $uploadOk[$i] = 0;
 }
