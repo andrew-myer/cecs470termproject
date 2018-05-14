@@ -76,8 +76,7 @@ function test_input($data) {
 				<ul>
 					<li><a href='index.php'>Home</a><li>
 					<li><a href='about.php'>About</a><li>
-					<li><a href='#'>Projects</a><li>
-					<li><a href='#'>Contact</a><li>
+					<li><a href='proj_main.php'>Projects</a><li>
 				</ul>
 			</nav>
 		</div>

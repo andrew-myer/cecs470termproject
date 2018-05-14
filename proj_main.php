@@ -43,7 +43,6 @@ $connect = null;
 					<li><a href='index.php'>Home</a><li>
 					<li><a href='about.php'>About </a><li>
 					<li><a href='proj_main.php'>Projects</a><li>
-					<li><a href='#'>Contact</a><li>
 				</ul>
 			</nav>
 		</div>
