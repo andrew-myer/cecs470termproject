@@ -40,8 +40,7 @@ $connect = null;
 				<ul>
 					<li><a href='index.php'>Home</a><li>
 					<li><a href='about.php'>About </a><li>
-					<li><a href='#'>Projects</a><li>
-					<li><a href='#'>Contact</a><li>
+					<li><a href='proj_main.php'>Projects</a><li>
 				</ul>
 			</nav>
 		</div>
@@ -58,9 +57,17 @@ $connect = null;
 		</div>
 		<div class="feat_proj">
 			<?php
+        $i=0;
+        echo "<div class=row>";
 				foreach($img_path as $image){
+          $i=$i+1;
 					echo "<div class=\"other_pics\"><img src=\"$image\" class=\"feat_pic\"></div>";
+          if($i%3==0)
+          {
+            echo '</div><div class="row">';
+          }
 				}
+        echo "</div>";
 			?>
 			<!--<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>
 			<div class="other_pics"><img src="images/slideshow1.jpg" class="feat_pic"></div>

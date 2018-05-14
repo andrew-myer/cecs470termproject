@@ -123,3 +123,9 @@ nav a:hover::before{
 	width: 32%;
 	margin: .5%;
 }
+.row{
+	width: 100%;
+	content: "";
+  display: table;
+  clear: both;
+}

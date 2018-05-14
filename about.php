@@ -89,7 +89,8 @@ function test_input($data) {
 		<div class="author">
 			<div class="feat_proj_text">
 				<h2><strong>Levi Thompson</strong></h2>
-				<p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+				<p>I am an avid photographer and filmmaker. Please feel free to contact me below or on any of my social media
+				sites.</p>
 			</div>
 			<img src="images/12.jpg" height= "850" width="100" class="feat_proj_img" alt="anotha one">
 		</div>

@@ -31,22 +31,26 @@ header::after{
 	width: 30%;
 }
 nav{
-  margin-top:2%;
+  /*margin-top:2%;*/
 	float:right;
 	width: 60%;
+	font-family: 'sans-serif';
 }
 nav ul{
+	font-family: 'sans-serif';
 	margin:0;
 	padding: 0;
 	list-style: none;
 }
 nav li{
+	font-family: 'sans-serif';
 	display:inline-block;
-	margin-left:2%;
-	padding-top: 2%;
+	margin-left:4%;
+	padding-top: 5%;
 	position: relative;
 }
 nav a{
+	font-family: 'sans-serif';
 	color:white;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -61,7 +65,7 @@ nav a::before{
 	height:5px;
 	width: 0%;
 	background-color: white;
-	
+
 	position: absolute;
 	top:0px;
 }
@@ -80,7 +84,7 @@ h1{
     font-weight: normal;
     font-size: 2.5vw;
     font-family: Arial, Helvetica, sans-serif;
-    
+
 }
 
 h2{
@@ -182,13 +186,13 @@ main{
       font-size: 4vw;
     }
   /*img-hover*/
-  
+
   span {
       font-size: 2.5vw;
   }
-  nav a{
+/*  nav a{
     font-size: 3vw;
-  }
+  }*/
   h1{
     font-size: 4vw;
     padding-left: 42.5%;
