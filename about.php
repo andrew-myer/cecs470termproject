@@ -92,7 +92,7 @@ function test_input($data) {
 				<p>I am an avid photographer and filmmaker. Please feel free to contact me below or on any of my social media
 				sites.</p>
 			</div>
-			<img src="images/12.jpg" height= "850" width="100" class="feat_proj_img" alt="anotha one">
+			<img src="images/12.jpg" height= "750" width="100" class="feat_proj_img" alt="anotha one">
 		</div>
 
 		<div class = "contact">
