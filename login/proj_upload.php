@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $prj_name = test_input($_POST["prj_name"]);
     if (!preg_match("/^[a-zA-Z ]*$/",$prj_name)) {
-      $prj_nameErr = "Only letters and white space allowed"; 
+      $prj_nameErr = "Only letters and white space allowed";
     }else if(is_dir("images/".$_POST["prj_name"])){
          // Check if project already exists
         $prj_nameErr =  $_POST["prj_name"]. " project already exists.";
@@ -49,7 +49,7 @@ for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++)
 }
 
 if($num_files!==0){
-    
+
 for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++)
 {
 $target_dir = "images/";
@@ -66,11 +66,12 @@ if(isset($_POST["submit"])) {
         $uploadOk[$i] = 0;
     }
 }
+/*
 // Check if file already exists
 if (file_exists($target_file)) {
     $noImageErr[$i] = basename( $_FILES["fileToUpload"]["name"][$i]). " already exists.<br>";
     $uploadOk[$i] = 0;
-}
+}*/
 // Check file size
 if ($_FILES["fileToUpload"]["size"][$i] > 500000000000000) {
     $noImageErr[$i] = basename( $_FILES["fileToUpload"]["name"][$i]). " is too large.<br>";
@@ -93,6 +94,9 @@ for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++)
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadk !== 0 && $$imgErr!==0 && $prj_nameErr=="" && $prj_descErr=="") {
+
+for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++){
+    $target_file = $target_dir ."/".$prj_name ."/". basename($_FILES["fileToUpload"]["name"][$i]);
     //Database connection
     $dbname = 'cecs470sec01og06';
     $dbuser = 'cecs470o33';
@@ -105,21 +109,20 @@ if ($uploadk !== 0 && $$imgErr!==0 && $prj_nameErr=="" && $prj_descErr=="") {
     // end database connection
 
     $sql = "Insert into projects (prj_name, prj_description) VALUES (?,?)";
-	$statement = $pdo->prepare($sql);
-	$statement->bindValue(1, $_POST['prj_name']);
-	$statement->bindValue(2, $_POST["prj_desc"]);
-	$statement->execute();
+    $statement = $pdo->prepare($sql);
+    $statement->bindValue(1, $_POST['prj_name']);
+    $statement->bindValue(2, $_POST["prj_desc"]);
+    $statement->execute();
+    $sql2 = "Insert into images (prj_name, img_path) VALUES(?,?)";
+    $statement2 = $pdo->prepare($sql2);
+    $statement2->bindValue(1, $_POST['prj_name']);
+    $statement2->bindValue(2, $target_file);
+    $statement2->execute();
     mkdir("../".$target_dir ."/". $prj_name);
-for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++){
-    $target_file = $target_dir ."/".$prj_name ."/". basename($_FILES["fileToUpload"]["name"][$i]);
 
 // if everything is ok, try to upload file
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], "../".$target_file)) {
-        $sql2 = "Insert into images (prj_name, img_path) VALUES(?,?)";
-	    $statement2 = $pdo->prepare($sql2);
-	    $statement2->bindValue(1, $_POST['prj_name']);
-	    $statement2->bindValue(2, $target_file);
-	    $statement2->execute();
+
     } else {
         $noImageErr[$i] = "There was an error uploading ".basename( $_FILES["fileToUpload"]["name"][$i]). "<br>";
     }
@@ -157,7 +160,7 @@ $connect = null;
     <input type="file" name="fileToUpload[]" id="fileToUpload" multiple><br>
     <span class="error"><?php for($i=0;$i<count($_FILES["fileToUpload"]["name"]);$i++){echo $noImageErr[$i];}?></span>
     <br><br>
-    <input type="submit" value="Upload Project" name="submit">  
+    <input type="submit" value="Upload Project" name="submit">
 </form>
 
 
