@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prj_name = test_input($_POST["prj_name"]);
     if (!preg_match("/^[a-zA-Z ]*$/",$prj_name)) {
       $prj_nameErr = "Only letters and white space allowed"; 
-    }else if(is_dir("images/".$_POST["prj_name"])){
+    }else if(is_dir("../images/".$_POST["prj_name"])){
          // Check if project already exists
         $prj_nameErr =  $_POST["prj_name"]. " project already exists.";
     }else{
