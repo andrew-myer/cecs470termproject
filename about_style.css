@@ -215,6 +215,8 @@ font-size: 1vw;
 	background-color: black;
 	float: left;
 	padding-left: 2%;
+	padding-top: 1vw;
+	padding-bottom:1vw;
 }
 .footer p{
 	padding: 0 0;
