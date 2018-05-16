@@ -1,7 +1,6 @@
 #!/usr/local/php5/bin/php-cgi
 <?php
 //Database connection
-$prj_name ="Nature";
 $dbname = 'cecs470sec01og06';
 $dbuser = 'cecs470o33';
 $dbpass = 'ooz4qu';
