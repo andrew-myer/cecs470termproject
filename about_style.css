@@ -1,16 +1,11 @@
-
 html{
 	margin: 0;
-	height:100px;
-	max-zoom:1;
-	min-zoom:1;
 }
 body{
+	height: 100vh;
 	background-color:#5E5E66;
 	font-family: 'sans-serif';
 	font-weight: 400;
-	height: 100px;
-	width: 100%;
 }
 
 #top_bar{
@@ -101,7 +96,7 @@ nav a:hover::before{
 	font-size: 1vw;
 	margin-bottom: 2%;
 	border-style: ridge;
-	border-width: 4%;
+	border-width: 2%;
 	border-bottom-color: black;
 }
 
@@ -121,7 +116,7 @@ nav a:hover::before{
 	margin-bottom: 2%;
 	padding-left: 34%;
 	border-style: ridge;
-	border-width: 4%;
+	border-width: 2%;
 	border-bottom-color: black;
 }
 .error {
@@ -172,7 +167,7 @@ font-size: 1vw;
 	padding-top: .5%;
 	margin-top: 2%;
 	border-style: ridge;
-	border-width: 4%;
+	border-width: 2%;
 	border-bottom-color: black;
 }
 #contactme{
@@ -204,13 +199,12 @@ font-size: 1vw;
 }
 
 .footer{
-	/*position: absolute;
-	top: 215%;*/
+	position: absolute;
+	top: 212%;
 	width: 100%;
 	font-size: 1vw;
 	color: white;
 	background-color: black;
-	float: left;
 	padding-left: 2%;
 	padding-top: 1vw;
 	padding-bottom:1vw;

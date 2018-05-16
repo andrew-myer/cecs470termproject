@@ -12,7 +12,7 @@
 
 
 <body>
-	<?php
+		<?php
 $fnameErr = $lnameErr = $emailErr = $commentErr = "";
 $fname = $lname = $email = $comment = "";
 
@@ -54,7 +54,7 @@ $email="";
 	    $commentErr = "A comment is required";
 	  } else {
 	    $comment = test_input($_POST["comments"]);
-	    if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
+	    if (!preg_match("/^[a-zA-Z ]*$/",$comment)) {
 	      $commentErr = "Only letters and white space allowed";
 
 	$comment="";
@@ -79,12 +79,12 @@ function test_input($data) {
     $connString = "mysql:host=cecs-db01.coe.csulb.edu;dbname=cecs470sec01og06";
     $pdo = new PDO($connString,$dbuser,$dbpass);
     // end database connection
-    $sql = "Insert into commentss (first_name, last_name, email, comments) VALUES (?,?,?,?)";
+    $sql = "Insert into comments (first_name, last_name, email, comments) VALUES (?,?,?,?)";
 	$statement = $pdo->prepare($sql);
-	$statement->bindValue(1, $_POST['fname']);
-	$statement->bindValue(2, $_POST['lname']);
-	$statement->bindValue(2, $_POST['email']);
-	$statement->bindValue(2, $_POST['comments']);
+	$statement->bindValue(1, $fname);
+	$statement->bindValue(2, $lname);
+	$statement->bindValue(3, $email);
+	$statement->bindValue(4, $comment);
 	$statement->execute();
 
 ?>
