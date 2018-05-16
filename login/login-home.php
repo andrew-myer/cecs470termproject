@@ -39,8 +39,10 @@ if(!$fgmembersite->CheckLogin())
 Welcome back <?= $fgmembersite->UserFullName(); ?>!
 
 <p><a href='change-pwd.php'>Change Password</a></p>
-
 <p><a href='../slideshow_upload.php'>Change Slideshow Pictures</a></p>
+<p><a href='proj_upload.php'>Upload Project</a></p>
+
+    
 <br><br><br>
 <p><a href='logout.php'>Logout</a></p>
 </div>
