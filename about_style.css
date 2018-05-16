@@ -1,4 +1,4 @@
-html{
+html{
 	margin: 0;
 }
 body{
@@ -66,6 +66,7 @@ nav a:hover::before{
 }
 
 
+
 .title_bar{
 	width: 100%;
 	color: white;
@@ -109,8 +110,7 @@ nav a:hover::before{
 	display: block;
 	margin-left: 5%;
 	width: 90%;
-	padding: 0em 0em;
-	padding-right: 3em;
+	height: 15%;
 	background-color: #FFFFFF;
 	border: none;
 	float: left;
@@ -118,7 +118,6 @@ nav a:hover::before{
 	padding-bottom: 2em;
 	margin-top: 2%;
 	margin-bottom: 2%;
-	padding-left: 34%;
 	border-style: ridge;
 	border-width: 2%;
 	border-bottom-color: black;
@@ -127,28 +126,6 @@ nav a:hover::before{
   background: #ffcdd2 no-repeat 98% center;
   box-shadow: 0 0 2% #ff5252;
   border-color: #ff1744;
-}
-
-.here{
-width: 50em;
-height: 50em;
-margin-right: 5em;
-padding: 0 0;
-}
-
-.here1{
-width: 50em;
-height: 50em;
-margin-left: 5em;
-margin-right: 0;
-padding: 0 0;
-}
-.here3{
-width: 50em;
-height: 50em;
-margin-left: 4%;
-margin-right: 4%;
-padding: 0 0;
 }
 
 .feat_proj_text{
@@ -219,15 +196,21 @@ font-size: 1vw;
 }
 
 #img1{
-	height:7%;
- 	width:7%;
+	height:5%;
+ 	width:5%;
+	margin-left: 32%;
+	padding: 0 0;
 }
 
 #img2{
-	height:7%;
- 	width:7%;
+	height:5%;
+ 	width:5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 0 0;
 }
 #img3{
-	height:7%;
- 	width:7%;
+	height:5%;
+ 	width:5%;
+	padding: 0 0;
 }

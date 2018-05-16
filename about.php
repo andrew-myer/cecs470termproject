@@ -118,7 +118,7 @@ function test_input($data) {
 		</div>
 
 		<div class = "contact">
-			<form method="post" action = "/~013032329/termproj/about.php">
+			<form method="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			<h3 id="contactme"><u><strong>Get in Touch</strong></u></h3>
 			<p>
   			<label for = "abc"><strong>First Name: </strong><span class="error">*<?php echo $fnameErr;?></span></label>
@@ -145,11 +145,11 @@ function test_input($data) {
 		</div>
 
 		<div class="socialmedia">
-			<a href="https://www.google.com/" class="here"><img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c521.png" alt="instagram link" id="img1"></a>
+			<a href="https://www.google.com/"><img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c521.png" alt="instagram link" id="img1"></a>
 
-			<a href="https://www.google.com/" class = "here3"><img src="http://www.stickpng.com/assets/images/584ac2d03ac3a570f94a666d.png" alt="facebook link" id="img2"></a>
+			<a href="https://www.google.com/"><img src="http://www.stickpng.com/assets/images/584ac2d03ac3a570f94a666d.png" alt="facebook link" id="img2"></a>
 
-			<a href="https://www.google.com/" class="here1"><img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/twitter-round-logo-png-transparent-background-7.png" alt="twitter link" id="img3"></a>
+			<a href="https://www.google.com/"><img src="http://backgroundcheckall.com/wp-content/uploads/2017/12/twitter-round-logo-png-transparent-background-7.png" alt="twitter link" id="img3"></a>
 		</div>
 <br/>
 </div>
