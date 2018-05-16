@@ -61,6 +61,26 @@ $email="";
 	    }
 	$commentErr = "";
 	  }
+if($commentErr==""&&$emailErr==""&&$lnameErr==""&&$fnameErr=="")
+		{
+			//Database connection
+			    $dbname = 'cecs470sec01og06';
+			    $dbuser = 'cecs470o33';
+			    $dbpass = 'ooz4qu';
+			    $dbhost = 'cecs-db01.coe.csulb.edu';
+			    $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
+			    mysql_select_db($dbname) or die("Could not open the db '$dbname'");
+			    $connString = "mysql:host=cecs-db01.coe.csulb.edu;dbname=cecs470sec01og06";
+			    $pdo = new PDO($connString,$dbuser,$dbpass);
+			    // end database connection
+			    $sql = "Insert into comments (first_name, last_name, email, comments) VALUES (?,?,?,?)";
+				$statement = $pdo->prepare($sql);
+				$statement->bindValue(1, $fname);
+				$statement->bindValue(2, $lname);
+				$statement->bindValue(3, $email);
+				$statement->bindValue(4, $comment);
+				$statement->execute();
+		}
   }
 function test_input($data) {
   $data = trim($data);
@@ -69,23 +89,7 @@ function test_input($data) {
   return $data;
 }
 
-//Database connection
-    $dbname = 'cecs470sec01og06';
-    $dbuser = 'cecs470o33';
-    $dbpass = 'ooz4qu';
-    $dbhost = 'cecs-db01.coe.csulb.edu';
-    $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
-    mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-    $connString = "mysql:host=cecs-db01.coe.csulb.edu;dbname=cecs470sec01og06";
-    $pdo = new PDO($connString,$dbuser,$dbpass);
-    // end database connection
-    $sql = "Insert into comments (first_name, last_name, email, comments) VALUES (?,?,?,?)";
-	$statement = $pdo->prepare($sql);
-	$statement->bindValue(1, $fname);
-	$statement->bindValue(2, $lname);
-	$statement->bindValue(3, $email);
-	$statement->bindValue(4, $comment);
-	$statement->execute();
+
 
 ?>
 	<header>

@@ -38,7 +38,9 @@ nav ul{
 nav li{
 	display:inline-block;
 	margin-left:4%;
+	/*margin-top: 5%;*/
 	padding-top: 5%;
+	position: relative;
 }
 nav a{
 	color:white;
@@ -52,14 +54,16 @@ nav a:hover{
 nav a::before{
 	content:'';
 	display:block;
-	height:2%;
+	height:5px;
 	width: 0%;
 	background-color: white;
+
+	position: absolute;
+	top:0px;
 }
 nav a:hover::before{
 	width:100%;
 }
-
 
 
 .title_bar{
