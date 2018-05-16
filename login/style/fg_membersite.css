@@ -235,7 +235,9 @@ padding-bottom:10px;
     font-family : Arial, sans-serif;
     font-size: 0.9em;
     line-height: 150%;
-    color: white
+    color: white;
+    background-color: #9A9A9A;
+    padding: 15px
 }
 
 
@@ -249,7 +251,7 @@ padding-bottom:10px;
 
 #fg_membersite_content a
 {
-    color: darkblue
+    color: darkblue;
 }
 
 .footer{
