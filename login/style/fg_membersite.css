@@ -30,7 +30,6 @@ nav ul{
 nav li{
 	display:inline-block;
 	margin-left:4%;
-	/*margin-top: 5%;*/
 	padding-top: 5%;
 	position: relative;
 }
@@ -229,20 +228,23 @@ body{
 font-family : Arial, sans-serif;
 padding-top:10px;
 padding-bottom:10px;
+    color: darkblue
 }
 #fg_membersite_content
 {
     font-family : Arial, sans-serif;
     font-size: 0.9em;
-    line-height: 150%
+    line-height: 150%;
+    color: white
 }
+
 
 #fg_membersite_content h2
 {
    font-family : Arial, sans-serif;
    font-size: 1.5em;
    font-weight:bold;
-   color:#333;
+   color: white;
 }
 
 .footer{

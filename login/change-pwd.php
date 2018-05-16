@@ -28,6 +28,20 @@ if(isset($_POST['submitted']))
       <script src="scripts/pwdwidget.js" type="text/javascript"></script>       
 </head>
 <body>
+    
+    
+    	<header>
+		<div id="top_bar">
+			<img src="../images/logo.png" alt="logo" class="logo">
+			<nav>
+				<ul>
+					<li><a href='login-home.php'>Dashboard</a><li>
+				</ul>
+			</nav>
+		</div>
+	</header>    
+    		<div class="title_bar">		</div>
+    
 
 <!-- Form Code Start -->
 <div id='fg_membersite'>
@@ -89,14 +103,14 @@ if(isset($_POST['submitted']))
 
 </script>
 
-<p>
-<a href='login-home.php'>Home</a>
-</p>
-
 </div>
 <!--
 Form Code End
 -->
+        
+    <footer class="footer">
+			<p>any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
+		</footer>
 
 </body>
 </html>

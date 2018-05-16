@@ -13,7 +13,7 @@ if(!$fgmembersite->CheckLogin())
 <html lang="en-US">
 <head>
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-      <title>Home page</title>
+      <title>Login Home</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
 </head>
     
@@ -44,5 +44,11 @@ Welcome back <?= $fgmembersite->UserFullName(); ?>!
 <br><br><br>
 <p><a href='logout.php'>Logout</a></p>
 </div>
+    
+    <footer class="footer">
+			<p>any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
+		</footer>
+    
+    
 </body>
 </html>
