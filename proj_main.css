@@ -231,3 +231,6 @@ main{
 	float: left;
 	text-align:center;
 }
+.footer a{
+  color: white;
+}
