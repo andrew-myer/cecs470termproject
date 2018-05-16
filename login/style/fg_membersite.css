@@ -228,7 +228,7 @@ body{
 font-family : Arial, sans-serif;
 padding-top:10px;
 padding-bottom:10px;
-    color: darkblue
+
 }
 #fg_membersite_content
 {
@@ -245,6 +245,11 @@ padding-bottom:10px;
    font-size: 1.5em;
    font-weight:bold;
    color: white;
+}
+
+#fg_membersite_content a
+{
+    color: darkblue
 }
 
 .footer{

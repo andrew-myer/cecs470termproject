@@ -13,7 +13,7 @@ if(!$fgmembersite->CheckLogin())
 <html lang="en-US">
 <head>
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-      <title>Login Home</title>
+      <title>Dashboard</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
 </head>
     
