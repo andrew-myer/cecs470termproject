@@ -18,6 +18,21 @@ if(isset($_POST['submitted']))
       <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
 </head>
 <body>
+    
+	<header>
+		<div id="top_bar">
+			<img src="../images/logo.png" alt="logo" class="logo">
+			<nav>
+				<ul>
+					<li><a href='../index.php'>Home</a><li>
+					<li><a href='../about.php'>About</a><li>
+					<li><a href='../proj_main.php'>Projects</a><li>
+				</ul>
+			</nav>
+		</div>
+	</header>    
+    		<div class="title_bar">		</div>
+    
 
 <!-- Form Code Start -->
 <div id='fg_membersite'>
@@ -47,11 +62,9 @@ if(isset($_POST['submitted']))
 <div class='short_explanation'><a href='reset-pwd-req.php'>Forgot Password?</a></div>
 </fieldset>
 </form>
-<!-- client-side Form Validations:
-Uses the excellent form validation script from JavaScript-coder.com-->
+
 
 <script type='text/javascript'>
-// <![CDATA[
 
     var frmvalidator  = new Validator("login");
     frmvalidator.EnableOnPageErrorDisplay();
@@ -61,12 +74,12 @@ Uses the excellent form validation script from JavaScript-coder.com-->
     
     frmvalidator.addValidation("password","req","Please provide the password");
 
-// ]]>
+
 </script>
 </div>
-<!--
-Form Code End (see html-form-guide.com for more info.)
--->
+		<footer class="footer">
+			<p>any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
+		</footer>
 
 </body>
 </html>

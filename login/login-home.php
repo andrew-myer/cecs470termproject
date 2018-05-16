@@ -16,6 +16,23 @@ if(!$fgmembersite->CheckLogin())
       <title>Home page</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
 </head>
+    
+	<header>
+		<div id="top_bar">
+			<img src="../images/logo.png" alt="logo" class="logo">
+			<nav>
+				<ul>
+					<li><a href='../index.php'>Home</a><li>
+					<li><a href='../about.php'>About</a><li>
+					<li><a href='../proj_main.php'>Projects</a><li>
+				</ul>
+			</nav>
+		</div>
+	</header>    
+    		<div class="title_bar">		</div>    
+    
+    
+    
 <body>
 <div id='fg_membersite_content'>
 <h2>Home Page</h2>
