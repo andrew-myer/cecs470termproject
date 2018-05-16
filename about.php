@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, height=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="about_style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<script src="about_form.js"></script>
+	<script src="js/about_form.js"></script>
 </head>
 
 
