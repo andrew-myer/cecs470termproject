@@ -7,7 +7,7 @@
 	<!-- <meta name="viewport" content="width=device-width, height=device-width, initial-scale=1.0"> -->
 	<link rel="stylesheet" href="about_style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<script src="js/about_form.js"></script>
+	<script src="about_form.js"></script>
 </head>
 
 
@@ -68,7 +68,8 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-	//Database connection
+
+//Database connection
     $dbname = 'cecs470sec01og06';
     $dbuser = 'cecs470o33';
     $dbpass = 'ooz4qu';
@@ -85,6 +86,7 @@ function test_input($data) {
 	$statement->bindValue(2, $_POST['email']);
 	$statement->bindValue(2, $_POST['comments']);
 	$statement->execute();
+
 ?>
 	<header>
 		<div id="top_bar">
@@ -93,7 +95,8 @@ function test_input($data) {
 				<ul>
 					<li><a href='index.php'>Home</a><li>
 					<li><a href='about.php'>About</a><li>
-					<li><a href='proj_main.php'>Projects</a><li>
+					<li><a href='#'>Projects</a><li>
+					<li><a href='#'>Contact</a><li>
 				</ul>
 			</nav>
 		</div>
@@ -106,14 +109,13 @@ function test_input($data) {
 		<div class="author">
 			<div class="feat_proj_text">
 				<h2><strong>Levi Thompson</strong></h2>
-				<p>I am an avid photographer and filmmaker. Please feel free to contact me below or on any of my social media
-				sites.</p>
+				<p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
 			</div>
-			<img src="images/12.jpg" height= "750" width="100" class="feat_proj_img" alt="anotha one">
+			<img src="images/author_pic.jpg" class="feat_proj_img" alt="anotha one">
 		</div>
 
 		<div class = "contact">
-			<form method="post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			<form method="post" action = "/~013032329/termproj/about.php">
 			<h3 id="contactme"><u><strong>Get in Touch</strong></u></h3>
 			<p>
   			<label for = "abc"><strong>First Name: </strong><span class="error">*<?php echo $fnameErr;?></span></label>

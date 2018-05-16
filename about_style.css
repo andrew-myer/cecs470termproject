@@ -6,10 +6,8 @@ body{
 	background-color:#5E5E66;
 	font-family: 'sans-serif';
 	font-weight: 400;
-	/* background-color:#FFFFFF; */
 }
 
-/*navigation bar*/
 #top_bar{
 	width: 80%;
 	margin: 0 auto;
@@ -40,9 +38,7 @@ nav ul{
 nav li{
 	display:inline-block;
 	margin-left:4%;
-	/*margin-top: 5%;*/
 	padding-top: 5%;
-	/* position: relative; */
 }
 nav a{
 	color:white;
@@ -59,9 +55,6 @@ nav a::before{
 	height:5px;
 	width: 0%;
 	background-color: white;
-
-	/* position: absolute; */
-	/* top:0px; */
 }
 nav a:hover::before{
 	width:100%;
@@ -89,7 +82,6 @@ nav a:hover::before{
 	margin-top: 5%;
 	width: 90%;
 	float: left;
-	/* background-color: black; */
 	background-color:#9A9A9A;
 	padding-top: .5%;
 	padding-bottom: .5%;
@@ -107,6 +99,7 @@ nav a:hover::before{
 	border-width: 10px;
 	border-bottom-color: black;
 }
+
 
 .socialmedia {
 	display: block;
@@ -200,7 +193,7 @@ font-size: 1vw;
 	text-align: center;
 }
 .feat_proj_img{
-	width: 46%;
+	width: 50%;
 	margin: 2%;
 	float: left;
 }
@@ -208,7 +201,6 @@ font-size: 1vw;
 .footer{
 	position: absolute;
 	top: 195%;
-	/* clear: both; */
 	width: 100%;
 	font-size: 1vw;
 	color: white;
