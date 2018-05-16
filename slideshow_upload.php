@@ -11,36 +11,42 @@ $pdo = new PDO($connString,$dbuser,$dbpass);
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-	mysql_query("DELETE FROM Slideshow",$connect);
+	if($_POST['name1']==""||$_POST['name1']==""||$_POST['name1']==""||$_POST['name1']=="")
+	{
+		echo "please fill out entire form";
+	}
+	else {
+		mysql_query("DELETE FROM Slideshow",$connect);
 
-	$sql = "Insert into Slideshow (Name, Path) VALUES (?,?)";
-	$statement = $pdo->prepare($sql);
-	$statement->bindValue(1, $_POST['name1']);
-	$statement->bindValue(2, $_FILES["image1"]["name"]);
-	$statement->execute();
+		$sql = "Insert into Slideshow (Name, Path) VALUES (?,?)";
+		$statement = $pdo->prepare($sql);
+		$statement->bindValue(1, $_POST['name1']);
+		$statement->bindValue(2, $_FILES["image1"]["name"]);
+		$statement->execute();
 
-	$sql2 = "Insert into Slideshow (Name, Path) VALUES(?,?)";
-	$statement2 = $pdo->prepare($sql2);
-	$statement2->bindValue(1, $_POST['name2']);
-	$statement2->bindValue(2, $_FILES["image2"]["name"]);
-	$statement2->execute();
+		$sql2 = "Insert into Slideshow (Name, Path) VALUES(?,?)";
+		$statement2 = $pdo->prepare($sql2);
+		$statement2->bindValue(1, $_POST['name2']);
+		$statement2->bindValue(2, $_FILES["image2"]["name"]);
+		$statement2->execute();
 
-	$sql3 = "Insert into Slideshow (Name, Path) VALUES(?,?)";
-	$statement3 = $pdo->prepare($sql3);
-	$statement3->bindValue(1, $_POST['name3']);
-	$statement3->bindValue(2, $_FILES["image3"]["name"]);
-	$statement3->execute();
+		$sql3 = "Insert into Slideshow (Name, Path) VALUES(?,?)";
+		$statement3 = $pdo->prepare($sql3);
+		$statement3->bindValue(1, $_POST['name3']);
+		$statement3->bindValue(2, $_FILES["image3"]["name"]);
+		$statement3->execute();
 
-	$sql4 = "Insert into Slideshow (Name, Path) VALUES(?,?)";
-	$statement4 = $pdo->prepare($sql4);
-	$statement4->bindValue(1, $_POST['name4']);
-	$statement3->bindValue(2, $_FILES["image4"]["name"]);
-	$statement3->execute();
+		$sql4 = "Insert into Slideshow (Name, Path) VALUES(?,?)";
+		$statement4 = $pdo->prepare($sql4);
+		$statement4->bindValue(1, $_POST['name4']);
+		$statement3->bindValue(2, $_FILES["image4"]["name"]);
+		$statement3->execute();
 
-	image2Folder("image1");
-	image2Folder("image2");
-	image2Folder("image3");
-	image2Folder("image4");
+		image2Folder("image1");
+		image2Folder("image2");
+		image2Folder("image3");
+		image2Folder("image4");
+	}
 }
 
 function image2Folder($fileName)
