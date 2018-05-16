@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>LeviThompsonMedia</title>
-	<!-- <meta name="viewport" content="width=device-width, height=device-width, initial-scale=1.0"> -->
+	<meta name="viewport" content="width=device-width, height=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="about_style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="about_form.js"></script>
@@ -95,8 +95,7 @@ function test_input($data) {
 				<ul>
 					<li><a href='index.php'>Home</a><li>
 					<li><a href='about.php'>About</a><li>
-					<li><a href='#'>Projects</a><li>
-					<li><a href='#'>Contact</a><li>
+					<li><a href='proj_main.php'>Projects</a><li>
 				</ul>
 			</nav>
 		</div>
@@ -107,11 +106,11 @@ function test_input($data) {
 		</div>
 		<div class ="feed">
 		<div class="author">
+							<img src="images/12.jpg" class="feat_proj_img" alt="anotha one">
 			<div class="feat_proj_text">
 				<h2><strong>Levi Thompson</strong></h2>
-				<p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+				<p>Im an avid photographer and video maker from  Huntington Beach who spends my time at the beach and going on adventures!</p>
 			</div>
-			<img src="images/author_pic.jpg" class="feat_proj_img" alt="anotha one">
 		</div>
 
 		<div class = "contact">
@@ -150,9 +149,9 @@ function test_input($data) {
 		</div>
 <br/>
 </div>
-		<div class="footer">
+		<footer class="footer">
 			<p>any questions please contact me at <a href='mailto:levithompsonmedia@gmail.com'>levithompsonmedia@gmail.com</a></p>
-		</div>
+		</footer>
 </body>
 
 </html>

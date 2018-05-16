@@ -1,11 +1,16 @@
+
 html{
 	margin: 0;
+	height:100px;
+	max-zoom:1;
+	min-zoom:1;
 }
 body{
-	height: 100vh;
 	background-color:#5E5E66;
 	font-family: 'sans-serif';
 	font-weight: 400;
+	height: 100px;
+	width: 100%;
 }
 
 #top_bar{
@@ -52,7 +57,7 @@ nav a:hover{
 nav a::before{
 	content:'';
 	display:block;
-	height:5px;
+	height:2%;
 	width: 0%;
 	background-color: white;
 }
@@ -96,7 +101,7 @@ nav a:hover::before{
 	font-size: 1vw;
 	margin-bottom: 2%;
 	border-style: ridge;
-	border-width: 10px;
+	border-width: 4%;
 	border-bottom-color: black;
 }
 
@@ -116,12 +121,12 @@ nav a:hover::before{
 	margin-bottom: 2%;
 	padding-left: 34%;
 	border-style: ridge;
-	border-width: 10px;
+	border-width: 4%;
 	border-bottom-color: black;
 }
 .error {
   background: #ffcdd2 no-repeat 98% center;
-  box-shadow: 0 0 5px #ff5252;
+  box-shadow: 0 0 2% #ff5252;
   border-color: #ff1744;
 }
 
@@ -167,7 +172,7 @@ font-size: 1vw;
 	padding-top: .5%;
 	margin-top: 2%;
 	border-style: ridge;
-	border-width: 10px;
+	border-width: 4%;
 	border-bottom-color: black;
 }
 #contactme{
@@ -193,14 +198,14 @@ font-size: 1vw;
 	text-align: center;
 }
 .feat_proj_img{
-	width: 50%;
+	width: 46%;
 	margin: 2%;
 	float: left;
 }
 
 .footer{
-	position: absolute;
-	top: 195%;
+	/*position: absolute;
+	top: 215%;*/
 	width: 100%;
 	font-size: 1vw;
 	color: white;
